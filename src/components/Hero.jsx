@@ -98,7 +98,7 @@ const Hero = () => {
 
         {/* Botón "Talk to me" */}
         <a
-          href="#"
+          href="/#contact"
           className="mx-auto mt-7 block w-max rounded-lg bg-sky-900 px-3 py-1 font-light capitalize tracking-wider text-white hover:bg-sky-900 transition-colors"
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
