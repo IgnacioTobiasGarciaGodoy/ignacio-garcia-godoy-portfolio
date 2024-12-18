@@ -5,7 +5,10 @@
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
 
-export const heroIcons = [<Linkedin />, <Github />];
+export const heroIcons = [
+  { icon: <Linkedin />, url: "https://www.linkedin.com/in/ignacio-garcia-godoy/" },
+  { icon: <Github />, url: "https://github.com/IgnacioTobiasGarciaGodoy" }
+];
 
 //About Me Component
 import { ArrowDownToLine } from "lucide-react";

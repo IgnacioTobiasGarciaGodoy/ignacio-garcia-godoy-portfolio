@@ -85,10 +85,10 @@ const Hero = () => {
 
         {/* Íconos de redes sociales */}
         <div className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl">
-          {heroIcons.map((icon, i) => (
+        {heroIcons.map(({ icon, url }, i) => (
             <a
               className="rounded-lg hover:bg-sky-900 hover:text-white transition-colors"
-              href="#"
+              href={url}
               key={i}
             >
               {icon}
