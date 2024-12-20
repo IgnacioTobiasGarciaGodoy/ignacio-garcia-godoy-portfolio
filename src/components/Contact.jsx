@@ -1,12 +1,12 @@
-"use client";
-import Image from "next/image";
-import Heading from "./sub/Heading";
-import { motion } from "framer-motion";
+'use client'
+import Heading from './sub/Heading'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   return (
-    <div id="contact" className="h-screen py-20 px-96">
-      <Heading text={"Get in touch"} />
+    <div id="contact" className="h-screen lg:h-auto py-20 lg:py-40 xs:pb-20">
+      <Heading text={'Get in touch'} />
       <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
         <motion.div
           initial={{ opacity: 0, y: 150 }}
@@ -15,12 +15,11 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <Image
-            className="w-[400px] rounded-md opacity-80"
-            unoptimized
-            src={"/contact.gif"}
+            src={'/contact.gif'}
             alt="Contact Image"
             width={400}
             height={400}
+            className="w-[400px] rounded-md opacity-80"
           />
         </motion.div>
         <motion.form
@@ -28,7 +27,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="w-[600px] lg:w-400px] sm:w-full flex flex-col gap-3"
+          className="w-[600px] lg:w-[400px] sm:w-full flex flex-col gap-3"
         >
           <div className="w-full flex lg:flex-col gap-x-3 lg:gap-y-3">
             <input
@@ -49,7 +48,7 @@ const Contact = () => {
           />
           <textarea
             className="max-h-[250px] min-h-[150px] border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
-            placeholder="Write me..."
+            placeholder="Write Me..."
           ></textarea>
           <input
             type="submit"
@@ -59,7 +58,7 @@ const Contact = () => {
         </motion.form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
