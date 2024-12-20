@@ -76,7 +76,7 @@ const Hero = () => {
             Hi! My Name is Ignacio García Godoy &
           </h1>
           <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
-            I'm a System Analyst and a Developer 🖥️
+            I&#39;m a System Analyst and a Developer 🖥️
           </p>
         </motion.div>
         <motion.div

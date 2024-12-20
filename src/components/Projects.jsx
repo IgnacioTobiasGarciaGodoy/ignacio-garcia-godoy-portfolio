@@ -19,7 +19,8 @@ const Projects = () => {
   useEffect(() => {
     handleClick()
     prevIndex.current = index
-  }, [index])
+  }, [index, handleClick])
+
   return (
     <div id="projects" className="min-h-screen py-20">
       <Heading text={'Projects'} />
