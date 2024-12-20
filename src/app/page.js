@@ -10,6 +10,7 @@ import Navbar from '@/components/NavBar'
 import Toggle from '@/components/sub/Toggle'
 import Load from '@/components/sub/Load'
 import { useState, useRef, useEffect } from 'react'
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   const [id, setId] = useState(0)
@@ -48,6 +49,7 @@ export default function Home() {
           <Contact />
         </div>
       </Toggle>
+      <Analytics />
     </>
   )
 }
