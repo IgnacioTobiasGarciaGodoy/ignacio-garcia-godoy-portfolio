@@ -157,12 +157,16 @@ export const projectsData = [
     desc: 'A user-friendly platform where registered users can easily create and customize personal portfolios with a simple drag-and-drop interface.',
     url: '/projects/portfolioGenerator.png',
     tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'ReactJS', 'NextJS'],
+    gitLink: 'https://github.com/EugenYepes/Portfolio-Generator',
+    //demoLink: '#',
   },
   {
     name: 'UltraClean.com',
     desc: 'A streamlined e-shop offering a wide variety of products, providing users with an easy and efficient online shopping experience.',
     url: '/projects/ultraClean.png',
     tech: ['C#', 'HTML', 'CSS', "Bootstrap"],
+    //gitLink: 'https://github.com/marianolongoort/NT1-2024-1C-C-G3',
+    //demoLink: '#',
   },
 ]
 
