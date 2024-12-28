@@ -1,12 +1,14 @@
 'use client'
 import Heading from './sub/Heading'
 import Image from 'next/image'
-import { arrowLeftIcon, experienceData } from '@/assets'
+import { arrowLeftIcon } from '@/assets'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Experience = () => {
   const containerRef = useRef(null)
+  const { t } = useTranslation()
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -14,9 +16,12 @@ const Experience = () => {
   })
 
   const scrollY = useSpring(scrollYProgress, { stiffness: 200, damping: 20 })
+
+  const experienceData = t('experienceData', { returnObjects: true })
+
   return (
     <div id="experience" className="relative py-20">
-      <Heading text={'Experience & Education'} />
+      <Heading text={t('experienceTitle')} />
       <Image
         src={'/education.png'}
         alt={'Experience Image'}

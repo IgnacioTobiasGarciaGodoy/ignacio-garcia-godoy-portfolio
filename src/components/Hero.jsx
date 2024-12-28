@@ -8,6 +8,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const [windowOffset, setWindowOffset] = useState({
@@ -18,6 +19,7 @@ const Hero = () => {
   const [buttonHover, setButtonHover] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+  const { t } = useTranslation();
 
   const handleMouseMove = e => {
     const { clientX, clientY } = e;
@@ -73,10 +75,10 @@ const Hero = () => {
             />
           </motion.div>
           <h1 className="text-center text-3xl font-bold tracking-wider text-gray-500 sm:text-2xl dark:text-white transition-colors">
-            Hi! My Name is Ignacio García Godoy &
+            {t('heroPresentation')}
           </h1>
           <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
-            I&#39;m a System Analyst and a Developer 🖥️
+            {t('heroTitle')}
           </p>
         </motion.div>
         <motion.div
@@ -106,7 +108,7 @@ const Hero = () => {
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
         >
-          Talk to me
+          {t('heroButton')}
         </motion.a>
       </div>
     </div>

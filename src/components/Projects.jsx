@@ -1,11 +1,13 @@
-"use client";
+'use client'
 import { useState, useRef, useEffect } from "react";
 import Heading from "./sub/Heading";
-import { projectsData, projectsButton } from "@/assets";
 import { animate, motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { projectsButton } from "@/assets";
 
 const Projects = () => {
+  const { t } = useTranslation(); // Usamos el hook para acceder a las traducciones
   const [tech, setTech] = useState("All");
   const [index, setIndex] = useState(0);
   const prevIndex = useRef(0);
@@ -26,8 +28,10 @@ const Projects = () => {
 
   return (
     <div id="projects" className="min-h-screen py-20">
-      <Heading text={"Projects"} />
+      <Heading text={t("projectsTitle")} />
       <div className="flex flex-wrap items-center justify-center gap-4 py-10">
+
+        {/* Botones */}
         {projectsButton.map((text, i) => (
           <motion.button
             key={i}
@@ -46,9 +50,10 @@ const Projects = () => {
           </motion.button>
         ))}
       </div>
+
       {/* Iconos de cada proyecto */}
       <div className="flex flex-wrap justify-center items-center gap-8">
-        {projectsData
+        {t("projectsData", { returnObjects: true })
           .filter(project => {
             return project.tech.some(item =>
               tech === "All" ? true : item === tech
@@ -82,7 +87,7 @@ const Projects = () => {
                       className="bg-sky-700 hover:bg-sky-900 text-white py-1 px-3 sm:py-2 sm:px-4 rounded-full flex items-center mb-2 text-xs sm:text-sm"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      View Proyect
+                      {t("viewProject")}
                     </a>
                   )}
                   {project.gitLink && (
@@ -93,7 +98,7 @@ const Projects = () => {
                       className="bg-gray-700 hover:bg-gray-800 text-white py-1 px-3 sm:py-2 sm:px-4 rounded-full flex items-center mb-2 text-xs sm:text-sm"
                     >
                       <Github className="w-4 h-4 mr-2" />
-                      View Code
+                      {t("viewCode")}
                     </a>
                   )}
                 </div>

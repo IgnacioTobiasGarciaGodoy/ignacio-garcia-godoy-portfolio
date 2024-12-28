@@ -1,13 +1,16 @@
-'use client'
+'use client';
 
-import Heading from './sub/Heading'
-import Image from 'next/image'
-import { aboutText, downloadIcon, arrowLeftIcon } from '@/assets'
+import Heading from './sub/Heading';
+import Image from 'next/image';
+import { downloadIcon, arrowLeftIcon } from '@/assets'; // Elimina aboutText de aquí
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="about" className="min-h-screen flex flex-col items-center justify-center">
-      <Heading text={'About Me'} />
+      <Heading text={t('aboutTitle')} />
       <div className="w-full flex items-center justify-between md:justify-center">
         <Image
           src={'/about-me.png'}
@@ -21,20 +24,20 @@ const About = () => {
             {arrowLeftIcon}
           </span>
           <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[16px] sm:text-[14px] dark:text-white">
-            {aboutText}
+            {t('aboutText')}
           </p>
           <a
             href="/CVIgnacioGarciaGodoy.pdf"
             download=""
             className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-gray-300 bg-sky-600 px-3 py-2 font-light text-white hover:bg-sky-900 transition-colors"
           >
-            <span>Download CV</span>
+            <span>{t('aboutButton')}</span>
             <span className="text-xl">{downloadIcon}</span>
           </a>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

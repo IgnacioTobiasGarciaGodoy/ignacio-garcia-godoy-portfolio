@@ -1,7 +1,10 @@
 'use client'
-import { navbarData, copyRightIcon } from '@/assets'
+import { navbarData } from '@/assets'
+import { useTranslation } from 'react-i18next'
 
 const Navbar = ({ id }) => {
+  const { t } = useTranslation() // Usamos el hook para acceder a las traducciones
+
   return (
     <div className="w-[60px] sm:w-[40px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-10 xl:py-6 z-10">
       <a href="/#home">
@@ -24,7 +27,7 @@ const Navbar = ({ id }) => {
                 i % 2 === 0 ? 'translate-x-2' : '-translate-x-2'
               } ${item.id === id && '-translate-x-0 opacity-100'}`}
             >
-              {item.name}
+              {t(`navbar.${item.id}`)} {/* Aquí traducimos el nombre del item */}
             </span>
           </a>
         ))}

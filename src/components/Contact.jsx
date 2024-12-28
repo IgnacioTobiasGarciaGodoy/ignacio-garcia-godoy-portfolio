@@ -4,8 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import sendContactMessage from "@/contact/sendContactMessage";
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+
+  const { t } = useTranslation();
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -31,7 +35,7 @@ const Contact = () => {
       id="contact"
       className="h-screen lg:h-auto py-20 lg:py-40 xs:pb-20"
     >
-      <Heading text={"Get in touch"} />
+      <Heading text={t('contactTitle')} />
       <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
         <motion.div
           initial={{ opacity: 0, y: 150 }}
@@ -61,14 +65,14 @@ const Contact = () => {
               type="text"
               name="name"
               className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
-              placeholder="Your Name"
+              placeholder={t('placeholderName')}
               onChange={handleChange}
             />
             <input
               type="email"
               name="email"
               className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
-              placeholder="Your Email"
+              placeholder={t('placeholderEmail')}
               onChange={handleChange}
             />
           </div>
@@ -76,19 +80,19 @@ const Contact = () => {
             type="text"
             name="subject"
             className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
-            placeholder="Subject"
+            placeholder={t('placeholderSubject')}
             onChange={handleChange}
           />
           <textarea
             name="message"
             className="max-h-[250px] min-h-[150px] border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
             onChange={handleChange}
-            placeholder="Write Me..."
+            placeholder={t('placeholderMessage')}
           ></textarea>
           <input
             type="submit"
             className="w-full border border-yellow-500 rounded-md bg-yellow-600 px-4 py-2 text-sm font-light tracking-wider text-white outline-none hover:bg-yellow-500 transition-colors cursor-pointer"
-            value="Send Message"
+            value={t('contactButton')}
           />
         </motion.form>
       </div>

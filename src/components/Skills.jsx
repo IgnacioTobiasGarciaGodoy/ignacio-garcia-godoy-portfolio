@@ -3,8 +3,12 @@ import Heading from './sub/Heading'
 import Image from 'next/image'
 import { skillsData } from '@/assets'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'; 
 
 const Skills = () => {
+
+  const { t } = useTranslation();
+
   const variants = {
     visible: (i) => ({
       opacity: 1,
@@ -18,10 +22,13 @@ const Skills = () => {
       y: 30,
     },
   }
+
   return (
     <div id="skills" className="min-h-screen flex flex-col items-center justify-center gap-y-20">
-      <Heading text={'Skills'} />
-      <p className='text-gray-500 dark:text-white transition-colors'>Programming languages ​​or tools that I have used and am actively learning and improving</p>
+      <Heading text={t('skillsTitle')} />
+      <p className='text-gray-500 dark:text-white transition-colors'>
+        {t('skillsText')}
+      </p>
       <div className="w-full flex justify-between flex-wrap gap-x-8 gap-y-10 lg:gap-y-6">
         {skillsData.map((item, i) => (
           <motion.div

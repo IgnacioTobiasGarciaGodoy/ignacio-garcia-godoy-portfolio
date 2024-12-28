@@ -12,6 +12,7 @@ import Load from "@/components/sub/Load";
 import { useState, useRef, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ToastContainer, Zoom } from "react-toastify";
+import LanguageSwitcher from "@/components/sub/LanguageSwitcher";
 
 export default function Home() {
   const [id, setId] = useState(0);
@@ -35,11 +36,13 @@ export default function Home() {
       observer.observe(comp);
     });
   }, []);
+
   return (
     <>
       <Load />
       <Toggle>
         <Navbar id={id} />
+        <LanguageSwitcher />
         <div className="w-min" ref={compsRef}>
           <Hero />
           <About />
