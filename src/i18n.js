@@ -97,14 +97,22 @@ i18n
           viewProject: "View Demo",
           projectsData: [
             {
-              name: 'PortfolioGenerator.com',
-              desc: 'A user-friendly platform where registered users can easily create and customize personal portfolios with a simple drag-and-drop interface.',
+              name: 'LPFA Data',
+              desc: 'A website that displays the statistics of all players from the 2024 Betano Tournament. It includes a search bar and combinable filters (team, position, goals, assists, etc.), making it ideal for analyzing performance and building fantasy teams. Intuitive design and optimized for all devices.',
+              url: '/projects/LPFAData.png',
+              tech: ['Spring Boot', 'HTML', 'TailwindCSS', "JavaScript", 'React'],
+              gitLink: 'https://github.com/IgnacioTobiasGarciaGodoy/LPFA_Data',
+              demoLink: 'https://lpfadata.netlify.app/',
+            },
+            {
+              name: 'Portfolio Generator',
+              desc: 'A website that allows users to create their own personalized portfolio. Upon registration, they can add and organize sections such as projects, experience, education, and more through an intuitive interface. Perfect for showcasing achievements and skills professionally.',
               url: '/projects/portfolioGenerator.png',
-              tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'ReactJS', 'NextJS'],
+              tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'React', 'NextJS'],
               gitLink: 'https://github.com/EugenYepes/Portfolio-Generator',
             },
             {
-              name: 'UltraClean.com',
+              name: 'UltraClean',
               desc: 'A streamlined e-shop offering a wide variety of products, providing users with an easy and efficient online shopping experience.',
               url: '/projects/ultraClean.png',
               tech: ['C#', 'HTML', 'CSS', "Bootstrap"],
@@ -221,10 +229,18 @@ i18n
           viewDemo: "Ver Demo",
           projectsData: [
             {
+              name: 'LPFA Data',
+              desc: 'Página web que muestra las estadísticas de todos los jugadores del Torneo Betano 2024. Incluye una barra de búsqueda y filtros combinables (equipo, posición, goles, asistencias, etc.), ideal para analizar el rendimiento y armar equipos de fantasy. Diseño intuitivo y optimizado para todo tipo de dispositivos.',
+              url: '/projects/LPFAData.png',
+              tech: ['Spring Boot', 'HTML', 'TailwindCSS', "JavaScript", 'React'],
+              gitLink: 'https://github.com/IgnacioTobiasGarciaGodoy/LPFA_Data',
+              demoLink: 'https://lpfadata.netlify.app/',
+            },
+            {
               name: 'PortfolioGenerator.com',
-              desc: 'Una plataforma fácil de usar donde los usuarios registrados pueden crear y personalizar portafolios personales con una sencilla interfaz de arrastrar y soltar.',
+              desc: 'Página web que permite a los usuarios crear su propio portafolio personalizado. Al registrarse, pueden agregar y organizar secciones como proyectos, experiencia, educación y más, mediante una interfaz intuitiva. Ideal para destacar logros y habilidades de forma profesional.',
               url: '/projects/portfolioGenerator.png',
-              tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'ReactJS', 'NextJS'],
+              tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'React', 'NextJS'],
               gitLink: 'https://github.com/EugenYepes/Portfolio-Generator',
             },
             {
