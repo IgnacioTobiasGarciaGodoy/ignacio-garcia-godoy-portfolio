@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 i18n
-  .use(initReactI18next) // Pasa i18n a react-i18next
+  .use(initReactI18next)
   .init({
     resources: {
       //! English
@@ -47,16 +47,6 @@ i18n
               ],
             },
             {
-              year: 2023,
-              title: 'Higher Education in Systems Analysis',
-              education: 'Analista de Sistemas - ORT (2023 - Present): In progress, technical degree with an intermediate title as Analista Programador.',
-              experience: [
-                'Advanced understanding of systems analysis and programming fundamentals.',
-                'Applied programming and problem-solving techniques in academic projects.',
-                'Developed knowledge of software development methodologies and practices.',
-              ],
-            },
-            {
               year: 2024,
               title: 'Project Management Skills',
               education: 'Curso Gestión de Proyectos y Fundamentos de Metodología Agile - Banco Santander Río (2024): Understanding Agile principles and project management frameworks.',
@@ -87,6 +77,19 @@ i18n
                 'Implemented design changes based on client requests to better meet business needs.',
               ],
             },
+            {
+              year: 2025,
+              title: 'Systems Analysis',
+              education: 'Analista de Sistemas - ORT (2023 - 2025)',
+              experience: [
+                'Advanced knowledge of systems analysis fundamentals, including process modeling, requirements gathering and documentation, and designing goal-oriented solutions.',
+                'Practical application of programming techniques, problem-solving, and process optimization in academic projects and real-world simulations.',
+                'Consolidation of knowledge in Agile methodologies (Scrum, Kanban) and software development best practices, fostering collaboration and product quality.',
+                'Development of competencies in relational databases (modeling, complex queries, and optimization), integrating these concepts into the project lifecycle.',
+                'Implementation of software design principles and architectural patterns, enhancing the ability to build scalable and maintainable solutions.',
+                'Strengthened soft skills: teamwork, effective communication with stakeholders, and time management in academic and collaborative environments.',
+              ],
+            },
           ],
 
           skillsTitle: "Skills",
@@ -97,28 +100,60 @@ i18n
           viewProject: "View Demo",
           projectsData: [
             {
+              name: 'Mitos y Leyendas App',
+              desc: 'A mobile app for Mitos y Leyendas card game enthusiasts. It allows users to register and log in, explore a full card encyclopedia with advanced search and filters, view detailed card information, and build and manage their own decks. It also includes a rules guide and a section to find registered stores.',
+              type: 'mobile',
+              url: ['/projects/myl/myl1.jpeg', '/projects/myl/myl2.jpeg', '/projects/myl/myl3.jpeg', '/projects/myl/myl4.jpeg', '/projects/myl/myl5.jpeg', '/projects/myl/myl6.jpeg', '/projects/myl/myl7.jpeg', '/projects/myl/myl8.jpeg', '/projects/myl/myl9.jpeg', '/projects/myl/myl10.jpeg', '/projects/myl/myl11.jpeg', '/projects/myl/myl12.jpeg', '/projects/myl/myl13.jpeg', '/projects/myl/myl14.jpeg', '/projects/myl/myl15.jpeg'],
+              tech: ['Kotlin', 'Jetpack Compose', 'Java', 'SQL'],
+              gitLink: 'https://github.com/tuUsuario/MitosYleyendasApp',
+              download: { apk: 'appsDownload/MitosYLeyendas.apk', name: 'Download' },
+            },
+            {
               name: 'LPFA Data',
               desc: 'A website that displays the statistics of all players from the 2024 Betano Tournament. It includes a search bar and combinable filters (team, position, goals, assists, etc.), making it ideal for analyzing performance and building fantasy teams. Intuitive design and optimized for all devices.',
-              url: '/projects/LPFAData.png',
-              tech: ['Spring Boot', 'HTML', 'TailwindCSS', "JavaScript", 'React'],
+              type: 'web',
+              url: ['/projects/lpfa_data/LPFAData.png'],
+              tech: ['Spring Boot', 'HTML', 'TailwindCSS', "JavaScript", 'React', 'SQL'],
               gitLink: 'https://github.com/IgnacioTobiasGarciaGodoy/LPFA_Data',
               demoLink: 'https://lpfadata.netlify.app/',
             },
             {
               name: 'Portfolio Generator',
               desc: 'A website that allows users to create their own personalized portfolio. Upon registration, they can add and organize sections such as projects, experience, education, and more through an intuitive interface. Perfect for showcasing achievements and skills professionally.',
-              url: '/projects/portfolioGenerator.png',
-              tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'React', 'NextJS'],
+              type: 'web',
+              url: ['/projects/portfolio_generator/portfolioGenerator.png'],
+              tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'React', 'NextJS', 'MongoDB'],
               gitLink: 'https://github.com/EugenYepes/Portfolio-Generator',
             },
             {
               name: 'UltraClean',
               desc: 'A streamlined e-shop offering a wide variety of products, providing users with an easy and efficient online shopping experience.',
-              url: '/projects/ultraClean.png',
-              tech: ['C#', 'HTML', 'CSS', "Bootstrap"],
+              type: 'web',
+              url: ['/projects/ultraclean/ultraClean.png'],
+              tech: ['C#', 'HTML', 'CSS', "Bootstrap", 'SQL'],
+            },
+            {
+              name: 'PetCare App',
+              desc: 'A demo mobile app focused on pet care management. It allows users to register their pets, set reminders for vet appointments, vaccinations, and feeding schedules. It also includes a mock integrated store to browse and simulate the purchase of pet food and supplies. (Design demo, not fully functional)',
+              type: 'mobile',
+              url: ['/projects/petapp/pets1.png', '/projects/petapp/pets2.png', '/projects/petapp/pets3.png', '/projects/petapp/pets4.png', '/projects/petapp/pets5.png', '/projects/petapp/pets6.png'],
+              tech: ['Kotlin', 'Jetpack Compose'],
+              gitLink: 'https://github.com/tuUsuario/PetCareApp',
+              download: { apk: 'appsDownload/petapp.apk', name: 'Descargar' },
+            },
+            {
+              name: 'Figma Design',
+              desc: 'A collection of design projects created using Figma, showcasing UI/UX skills and design principles.',
+              type: 'web',
+              url: ['/projects/figma/figma1.jpeg', '/projects/figma/figma2.jpeg', '/projects/figma/figma3.jpeg', '/projects/figma/figma4.jpeg', '/projects/figma/figma5.jpeg', '/projects/figma/figma6.jpeg'],
+              tech: ['Figma'],
+              figmaLink: [
+                { link: 'https://www.figma.com/design/l72xq82BTv3n9TARoKBaqe/Mitos-y-Leyendas-Companion?node-id=1-3170&p=f&t=MESljlJl8CLupuUK-0', name: 'Mitos y Leyendas' },
+                { link: 'https://www.figma.com/design/RE4ddiIZ5Mv4ZHG2zhp1fw/F1-Project?node-id=0-1&p=f&t=wYwabxvyNQPHk6Cj-0', name: 'F1 APP' },
+              ],
             },
           ],
-          
+
           contactTitle: "Get in touch",
           placeholderName: "Your Name",
           placeholderEmail: "Your Email",
@@ -179,16 +214,6 @@ i18n
               ],
             },
             {
-              year: 2023,
-              title: 'Educación Superior en Análisis de Sistemas',
-              education: 'Analista de Sistemas - ORT (2023 - Presente): En curso, carrera técnica con título intermedio como Analista Programador.',
-              experience: [
-                'Comprensión avanzada de los fundamentos del análisis de sistemas y programación.',
-                'Aplicación de técnicas de programación y resolución de problemas en proyectos académicos.',
-                'Desarrollo de conocimientos sobre metodologías y prácticas en el desarrollo de software.',
-              ],
-            },
-            {
               year: 2024,
               title: 'Habilidades en Gestión de Proyectos',
               education: 'Curso Gestión de Proyectos y Fundamentos de Metodología Agile - Banco Santander Río (2024): Comprensión de los principios Agile y marcos de gestión de proyectos.',
@@ -219,6 +244,19 @@ i18n
                 'Implementé cambios de diseño basados en solicitudes del cliente para satisfacer mejor las necesidades del negocio.',
               ],
             },
+            {
+              year: 2025,
+              title: 'Análisista de Sistemas',
+              education: 'Analista de Sistemas - ORT (2023 - 2025)',
+              experience: [
+                'Dominio avanzado de los fundamentos del análisis de sistemas, incluyendo el modelado de procesos, levantamiento y documentación de requerimientos, y diseño de soluciones orientadas a objetivos.',
+                'Aplicación práctica de técnicas de programación, resolución de problemas y optimización de procesos en proyectos académicos y simulaciones de entornos reales.',
+                'Consolidación de conocimientos en metodologías ágiles (Scrum, Kanban) y buenas prácticas de desarrollo de software, fomentando la colaboración y la calidad del producto final.',
+                'Desarrollo de competencias en bases de datos relacionales (modelado, consultas complejas y optimización), integrando los conceptos en el ciclo de vida de los proyectos.',
+                'Implementación de principios de diseño de software y patrones de arquitectura, fortaleciendo la capacidad de construir soluciones escalables y mantenibles.',
+                'Fortalecimiento de habilidades blandas clave: trabajo en equipo, comunicación efectiva con stakeholders y gestión del tiempo en entornos académicos y colaborativos.',
+              ],
+            },
           ],
 
           skillsTitle: "Habilidades",
@@ -229,9 +267,19 @@ i18n
           viewDemo: "Ver Demo",
           projectsData: [
             {
+              name: 'Mitos y Leyendas',
+              type: 'mobile',
+              desc: 'Una aplicación móvil para fanáticos del juego de cartas Mitos y Leyendas. Permite a los usuarios registrarse e iniciar sesión, explorar una enciclopedia completa de cartas con búsqueda avanzada y filtros, ver información detallada de cada carta y crear y administrar sus propios mazos. También incluye una guía de reglas y una sección para encontrar tiendas registradas.',
+              url: ['/projects/myl/myl1.jpeg', '/projects/myl/myl2.jpeg', '/projects/myl/myl3.jpeg', '/projects/myl/myl4.jpeg', '/projects/myl/myl5.jpeg', '/projects/myl/myl6.jpeg', '/projects/myl/myl7.jpeg', '/projects/myl/myl8.jpeg', '/projects/myl/myl9.jpeg', '/projects/myl/myl10.jpeg', '/projects/myl/myl11.jpeg', '/projects/myl/myl12.jpeg', '/projects/myl/myl13.jpeg', '/projects/myl/myl14.jpeg', '/projects/myl/myl15.jpeg'],
+              tech: ['Kotlin', 'Jetpack Compose', 'Java', 'Spring Boot', 'Firebase', 'Room', 'PostgreSQL'],
+              gitLink: 'https://github.com/tuUsuario/MitosYleyendasApp',
+              download: { apk: 'appsDownload/MitosYLeyendas.apk', name: 'Descargar' },
+            },
+            {
               name: 'LPFA Data',
               desc: 'Página web que muestra las estadísticas de todos los jugadores del Torneo Betano 2024. Incluye una barra de búsqueda y filtros combinables (equipo, posición, goles, asistencias, etc.), ideal para analizar el rendimiento y armar equipos de fantasy. Diseño intuitivo y optimizado para todo tipo de dispositivos.',
-              url: '/projects/LPFAData.png',
+              type: 'web',
+              url: ['/projects/lpfa_data/LPFAData.png'],
               tech: ['Spring Boot', 'HTML', 'TailwindCSS', "JavaScript", 'React'],
               gitLink: 'https://github.com/IgnacioTobiasGarciaGodoy/LPFA_Data',
               demoLink: 'https://lpfadata.netlify.app/',
@@ -239,22 +287,44 @@ i18n
             {
               name: 'PortfolioGenerator.com',
               desc: 'Página web que permite a los usuarios crear su propio portafolio personalizado. Al registrarse, pueden agregar y organizar secciones como proyectos, experiencia, educación y más, mediante una interfaz intuitiva. Ideal para destacar logros y habilidades de forma profesional.',
-              url: '/projects/portfolioGenerator.png',
+              type: 'web',
+              url: ['/projects/portfolio_generator/portfolioGenerator.png'],
               tech: ['JavaScript', 'HTML', 'CSS', 'TailwindCSS', 'React', 'NextJS'],
               gitLink: 'https://github.com/EugenYepes/Portfolio-Generator',
             },
             {
               name: 'UltraClean.com',
+              type: 'web',
               desc: 'Una tienda online eficiente que ofrece una amplia variedad de productos, brindando a los usuarios una experiencia de compra fácil y eficiente.',
-              url: '/projects/ultraClean.png',
+              url: ['/projects/ultraclean/ultraClean.png'],
               tech: ['C#', 'HTML', 'CSS', "Bootstrap"],
+            },
+            {
+              name: 'App de Cuidado de Mascotas',
+              desc: 'Una aplicación móvil de demostración enfocada en la gestión del cuidado de mascotas. Permite a los usuarios registrar a sus mascotas, establecer recordatorios para citas veterinarias, vacunaciones y horarios de alimentación. También incluye una tienda simulada para explorar y simular la compra de alimentos y suministros para mascotas. (Demo de diseño, no completamente funcional)',
+              type: 'mobile',
+              url: ['/projects/petapp/pets1.png', '/projects/petapp/pets2.png', '/projects/petapp/pets3.png', '/projects/petapp/pets4.png', '/projects/petapp/pets5.png', '/projects/petapp/pets6.png'],
+              tech: ['Kotlin', 'Jetpack Compose', 'Java', 'Spring Boot', 'Firebase', 'PostgreSQL'],
+              gitLink: 'https://github.com/tuUsuario/PetCareApp',
+              download: { apk: 'appsDownload/petapp.apk', name: 'Descargar' },
+            },
+            {
+              name: 'Diseños en Figma',
+              desc: 'Una colección de proyectos de diseño creados con Figma, mostrando habilidades en UI/UX y principios de diseño.',
+              type: 'web',
+              url: ['/projects/figma/figma1.jpeg', '/projects/figma/figma2.jpeg', '/projects/figma/figma3.jpeg', '/projects/figma/figma4.jpeg', '/projects/figma/figma5.jpeg', '/projects/figma/figma6.jpeg'],
+              tech: ['Figma'],
+              figmaLink: [
+                { link: 'https://www.figma.com/design/l72xq82BTv3n9TARoKBaqe/Mitos-y-Leyendas-Companion?node-id=1-3170&p=f&t=MESljlJl8CLupuUK-0', name: 'Mitos y Leyendas' },
+                { link: 'https://www.figma.com/design/RE4ddiIZ5Mv4ZHG2zhp1fw/F1-Project?node-id=1-8&p=f&t=MESljlJl8CLupuUK-0', name: 'F1 APP' },
+              ],
             },
           ],
 
-          contactTitle: "Ponerse en contacto", 
-          placeholderName: "Tu Nombre", 
-          placeholderEmail: "Tu Correo Electrónico", 
-          placeholderSubject: "Asunto", 
+          contactTitle: "Ponerse en contacto",
+          placeholderName: "Tu Nombre",
+          placeholderEmail: "Tu Correo Electrónico",
+          placeholderSubject: "Asunto",
           placeholderMessage: "Escríbeme...",
           contactButton: "Enviar Mensaje",
 
@@ -269,10 +339,10 @@ i18n
         }
       }
     },
-    lng: "en", // Lenguaje por defecto
-    fallbackLng: "en", // Lenguaje de reserva si no se encuentra el idioma seleccionado
+    lng: "en",
+    fallbackLng: "en",
     interpolation: {
-      escapeValue: false // React ya escapa valores por defecto
+      escapeValue: false
     }
   });
 

@@ -84,6 +84,22 @@ export const skillsData = [
     name: 'IntelliJ',
     icon: '/skills/intellij.png'
   },
+  {
+    name: 'Android Studio',
+    icon: '/skills/androidStudio.png'
+  },
+  {
+    name: 'Kotlin',
+    icon: '/skills/kotlin.png'
+  },
+  {
+    name: 'Jetpack Compose',
+    icon: '/skills/jetpack.png'
+  },
+  {
+    name: 'Figma',
+    icon: '/skills/figma.png'
+  },
 ]
 
 export const projectsButton = [
@@ -97,6 +113,11 @@ export const projectsButton = [
   'NextJS',
   'Bootstrap',
   'C#',
+  'MongoDB',
+  'SQL',
+  'Kotlin',
+  'Jetpack Compose',
+  'Figma'
 ]
 
 export const pricingPlans = [
