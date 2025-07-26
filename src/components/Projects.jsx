@@ -11,15 +11,16 @@ const Projects = () => {
   const { t } = useTranslation(); // Usamos el hook para acceder a las traducciones
   const [tech, setTech] = useState("All");
   const [index, setIndex] = useState(0);
+  const [projectType, setProjectType] = useState("web");
   const prevIndex = useRef(0);
   const buttonsRef = useRef([]);
 
   const handleClick = () => {
-    animate(buttonsRef.current[prevIndex.current], {
-      opacity: 0.5,
-      scale: 1,
-    });
-    animate(buttonsRef.current[index], { opacity: 1, scale: 1.2 });
+    const prevButton = buttonsRef.current[prevIndex.current];
+    const currentButton = buttonsRef.current[index];
+    if (!prevButton || !currentButton) return; // <-- FIX: Evitamos error cuando los refs son undefined
+    animate(prevButton, { opacity: 0.5, scale: 1 });
+    animate(currentButton, { opacity: 1, scale: 1.2 });
   };
 
   useEffect(() => {
@@ -27,25 +28,52 @@ const Projects = () => {
     prevIndex.current = index;
   }, [index, handleClick]);
 
+  const filteredButtons = [
+    "All",
+    ...new Set(
+      t("projectsData", { returnObjects: true })
+        .filter(p => p.type === projectType)
+        .flatMap(p => p.tech)
+    ),
+  ];
+
   return (
     <div id="projects" className="min-h-screen py-20">
       <Heading text={t("projectsTitle")} />
-      <div className="flex flex-wrap items-center justify-center gap-4 py-10">
 
-        {/* Botones */}
-        {projectsButton.map((text, i) => (
+      {/* Botón para cambiar el tipo de proyecto */}
+      <div className="flex justify-center mb-6">
+        <div className="relative rounded-full p-1 flex w-[300px]">
+          {["web", "mobile", "design"].map((type) => (
+            <button
+              key={type}
+              onClick={() => { setProjectType(type); setTech("All"); setIndex(0); }}
+              className={`relative z-10 flex-1 text-center py-2 rounded-full text-sm font-medium transition-colors ${projectType === type ? "text-white" : "text-gray-400"
+                }`}
+            >
+              {type === "web" ? "Web" : type === "mobile" ? "Mobile" : "Design"}
+            </button>
+          ))}
+
+          {/* Indicador animado */}
+          <motion.div
+            layout
+            className="absolute top-1 bottom-1 w-[33.3333%] bg-yellow-500 rounded-full"
+            animate={{ x: projectType === "web" ? 0 : projectType === "mobile" ? "100%" : "200%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          />
+        </div>
+      </div>
+
+      {/* Botones de tecnologías */}
+      <div className="flex flex-wrap items-center justify-center gap-4 py-10 overflow-x-auto">
+        {filteredButtons.map((text, i) => (
           <motion.button
             key={i}
-            initial={{
-              opacity: i === 0 ? 1 : 0.5,
-              scale: i === 0 ? 1.2 : 1,
-            }}
-            ref={el => buttonsRef.current.push(el)}
-            onClick={() => {
-              setTech(text);
-              setIndex(i);
-            }}
-            className="border border-yellow-500 rounded-xl px-4 py-2 text-sm font-light tracking-wider text-gray-400"
+            initial={{ opacity: i === 0 ? 1 : 0.5, scale: i === 0 ? 1.2 : 1 }}
+            ref={el => buttonsRef.current[i] = el}
+            onClick={() => { setTech(text); setIndex(i); }}
+            className="border border-yellow-500 rounded-xl px-4 py-2 text-sm font-light tracking-wider text-gray-400 whitespace-nowrap"
           >
             {text}
           </motion.button>
@@ -55,6 +83,7 @@ const Projects = () => {
       {/* Iconos de cada proyecto */}
       <div className="flex flex-wrap justify-center items-center gap-8">
         {t("projectsData", { returnObjects: true })
+          .filter(project => project.type === projectType)
           .filter(project => {
             return project.tech.some(item =>
               tech === "All" ? true : item === tech
@@ -120,7 +149,7 @@ const Projects = () => {
                     )}
                     {project.download && (
                       <a
-                        href={project.download}
+                        href={project.download.apk}
                         download
                         className="bg-green-600 hover:bg-green-800 text-white py-1 px-3 sm:py-2 sm:px-4 rounded-full flex items-center mb-2 text-xs sm:text-sm"
                       >

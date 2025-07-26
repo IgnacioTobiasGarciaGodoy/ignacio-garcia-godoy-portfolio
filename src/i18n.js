@@ -106,7 +106,7 @@ i18n
               url: ['/projects/myl/myl1.jpeg', '/projects/myl/myl2.jpeg', '/projects/myl/myl3.jpeg', '/projects/myl/myl4.jpeg', '/projects/myl/myl5.jpeg', '/projects/myl/myl6.jpeg', '/projects/myl/myl7.jpeg', '/projects/myl/myl8.jpeg', '/projects/myl/myl9.jpeg', '/projects/myl/myl10.jpeg', '/projects/myl/myl11.jpeg', '/projects/myl/myl12.jpeg', '/projects/myl/myl13.jpeg', '/projects/myl/myl14.jpeg', '/projects/myl/myl15.jpeg'],
               tech: ['Kotlin', 'Jetpack Compose', 'Java', 'SQL'],
               gitLink: 'https://github.com/tuUsuario/MitosYleyendasApp',
-              download: { apk: 'appsDownload/MitosYLeyendas.apk', name: 'Download' },
+              download: { apk: '/appsDownload/MitosYLeyendas.apk', name: 'Download' },
             },
             {
               name: 'LPFA Data',
@@ -144,7 +144,7 @@ i18n
             {
               name: 'Figma Design',
               desc: 'A collection of design projects created using Figma, showcasing UI/UX skills and design principles.',
-              type: 'web',
+              type: 'design',
               url: ['/projects/figma/figma1.jpeg', '/projects/figma/figma2.jpeg', '/projects/figma/figma3.jpeg', '/projects/figma/figma4.jpeg', '/projects/figma/figma5.jpeg', '/projects/figma/figma6.jpeg'],
               tech: ['Figma'],
               figmaLink: [
@@ -268,8 +268,8 @@ i18n
           projectsData: [
             {
               name: 'Mitos y Leyendas',
-              type: 'mobile',
               desc: 'Una aplicación móvil para fanáticos del juego de cartas Mitos y Leyendas. Permite a los usuarios registrarse e iniciar sesión, explorar una enciclopedia completa de cartas con búsqueda avanzada y filtros, ver información detallada de cada carta y crear y administrar sus propios mazos. También incluye una guía de reglas y una sección para encontrar tiendas registradas.',
+              type: 'mobile',
               url: ['/projects/myl/myl1.jpeg', '/projects/myl/myl2.jpeg', '/projects/myl/myl3.jpeg', '/projects/myl/myl4.jpeg', '/projects/myl/myl5.jpeg', '/projects/myl/myl6.jpeg', '/projects/myl/myl7.jpeg', '/projects/myl/myl8.jpeg', '/projects/myl/myl9.jpeg', '/projects/myl/myl10.jpeg', '/projects/myl/myl11.jpeg', '/projects/myl/myl12.jpeg', '/projects/myl/myl13.jpeg', '/projects/myl/myl14.jpeg', '/projects/myl/myl15.jpeg'],
               tech: ['Kotlin', 'Jetpack Compose', 'Java', 'Spring Boot', 'Firebase', 'Room', 'PostgreSQL'],
               gitLink: 'https://github.com/tuUsuario/MitosYleyendasApp',
@@ -294,8 +294,8 @@ i18n
             },
             {
               name: 'UltraClean.com',
-              type: 'web',
               desc: 'Una tienda online eficiente que ofrece una amplia variedad de productos, brindando a los usuarios una experiencia de compra fácil y eficiente.',
+              type: 'web',
               url: ['/projects/ultraclean/ultraClean.png'],
               tech: ['C#', 'HTML', 'CSS', "Bootstrap"],
             },
